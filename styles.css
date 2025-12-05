@@ -10,3 +10,52 @@ body{
     font-weight: 300;
     font-size: 3.2rem;
 }
+
+.datetime{
+    position: absolute;
+    top: 70px;
+    right: 50px;
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 1.5rem;
+}
+
+.greeting{
+    font-size: 20px;
+}
+main{
+    margin-top: 300px;
+    padding-left: 40px;
+}
+.about{
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 1.7rem;
+}
+
+img{
+    width: 35px;
+    height: 35px;
+}
+
+.social-links{
+    position: absolute;
+    bottom: 40px;
+    right: 50px;
+    
+}
+
+.movies-link{
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 1.6rem;
+}
+
+.movies-link a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.movies-link a:hover {
+    text-decoration: underline;
+}
