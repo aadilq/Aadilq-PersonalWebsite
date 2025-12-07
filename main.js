@@ -18,9 +18,45 @@ function typeParagraph(){
         aboutParagraph.innerHTML = paragraphText.substring(0, charIndex);
     }
     else{
-        clearInterval(typingInterval)
-        setTimeout(listItems, 500)
+       clearInterval(typingInterval)
+       setInterval(() => {
+        listTypingInterval = setInterval(typeListItem, 80)
+       }, 500);
     }
 }
 
 const typingInterval = setInterval(typeParagraph, 80)
+
+
+let currentListItem = null; //hold current <li> that is being typed out
+let listCharIndex = 0 //hold the current character position in the current li
+let listTypingInterval
+
+function typeListItem(){
+    if (listIndex >= listItems.length) {
+        clearInterval(listTypingInterval);
+        return;
+    }
+
+    if(currentListItem == null){
+        currentListItem = document.createElement('li')
+        aboutList.appendChild(currentListItem)
+        listCharIndex = 0
+    }
+    if(listCharIndex < listItems[listIndex].length){
+        currentListItem.textContent += listItems[listIndex][listCharIndex]
+        listCharIndex ++ 
+    }
+    else{
+        listIndex++
+        currentListItem = null
+        clearInterval(listTypingInterval);
+        
+        if(listIndex < listItems.length){
+
+            setTimeout(() => {
+                listTypingInterval = setInterval(typeListItem, 80)
+            }, 300);
+        } 
+    }
+}
