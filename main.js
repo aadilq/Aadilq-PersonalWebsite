@@ -51,7 +51,7 @@ function typeListItem(){
         listIndex++
         currentListItem = null
         clearInterval(listTypingInterval);
-        
+
         if(listIndex < listItems.length){
 
             setTimeout(() => {
@@ -60,3 +60,25 @@ function typeListItem(){
         } 
     }
 }
+
+const monthName = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+
+function updatedDatedTime(){
+    const now = new Date()
+
+    const month = monthName[now.getMonth()]
+    const day = now.getDate()
+    const year = now.getFullYear()
+    const hours = now.getHours()
+    const minutes = now.getMinutes()
+    const seconds = now.getSeconds()
+
+    const formattedTime = hours + ':' + (minutes < 10 ? '0' + minutes : minutes) + ':' + (seconds < 10 ? '0' + seconds : seconds)
+
+    const dateTimeString = month + ' ' + day + ', ' + year + ' ' + formattedTime
+
+    document.querySelector('.datetime').textContent = dateTimeString
+}
+
+updatedDatedTime()
+setInterval(updatedDatedTime, 1000)
