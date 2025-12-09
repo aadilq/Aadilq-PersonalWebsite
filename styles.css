@@ -31,7 +31,7 @@ main{
     font-size: 1.7rem;
 }
 
-img{
+.social-links img{
     width: 35px;
     height: 35px;
 }
@@ -73,6 +73,11 @@ img{
 
 .social-links a img:hover {
     transform: scale(1.2);  
+}
+
+.greeting img{
+    width: 20px;
+    height: 20px;
 }
 
 

@@ -85,3 +85,27 @@ function updatedDatedTime(){
 
 updatedDatedTime()
 setInterval(updatedDatedTime, 1000)
+
+
+function updateGreeting(){
+    const now = new Date()
+    const hour = now.getHours()
+    let greeting;
+
+    if(hour >= 5 && hour <= 12){
+        greeting = 'Good Morning <img src="assets/coffee.png" alt="coffee">';
+    }
+    else if(hour >= 12 && hour < 18){
+        greeting = 'Good Afternoon <img src="assets/coffee.png" alt="coffee">';
+    }
+    else if(hour >= 18 && hour < 21){
+        greeting = 'Good Evening <img src="assets/day-and-night.png" alt="coffee">';
+    }
+    else{
+        greeting = 'Good Night <img src="assets/night-mode.png" alt="coffee"> ';
+    }
+    document.querySelector('.greeting').innerHTML = greeting
+}
+
+updateGreeting()
+setInterval(updateGreeting, 60000)
