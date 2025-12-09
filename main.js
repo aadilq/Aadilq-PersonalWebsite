@@ -90,15 +90,16 @@ setInterval(updatedDatedTime, 1000)
 function updateGreeting(){
     const now = new Date()
     const hour = now.getHours()
+    console.log(hour)
     let greeting;
 
     if(hour >= 5 && hour <= 12){
         greeting = 'Good Morning <img src="assets/coffee.png" alt="coffee">';
     }
-    else if(hour >= 12 && hour < 18){
+    else if(hour >= 12 && hour < 16){
         greeting = 'Good Afternoon <img src="assets/coffee.png" alt="coffee">';
     }
-    else if(hour >= 18 && hour < 21){
+    else if(hour >= 17 && hour < 21){
         greeting = 'Good Evening <img src="assets/day-and-night.png" alt="coffee">';
     }
     else{
