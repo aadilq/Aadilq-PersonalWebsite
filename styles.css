@@ -55,15 +55,27 @@ main{
     font-size: 1.6rem;
 }
 
-.movies-link a {
+.movies-link a{
+    color: rgb(77, 72, 72);
     text-decoration: none;
-    color: #000000;
 }
 
-.movies-link a:hover {
-    text-decoration: underline;
-    color: gray;
-    transform: scale(1.2);
+.movies-link a:hover{
+    color: black;
+    transform: scale(1.2);  
+}
+
+.movies-link a::after {
+    content: ' →';
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+}
+
+.movies-link a:hover::after {
+    color: black;
+    opacity: 1;
+    transform: translateX(0);
 }
 
 

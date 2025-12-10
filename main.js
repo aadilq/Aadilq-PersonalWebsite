@@ -20,12 +20,12 @@ function typeParagraph(){
     else{
        clearInterval(typingInterval)
        setInterval(() => {
-        listTypingInterval = setInterval(typeListItem, 80)
+        listTypingInterval = setInterval(typeListItem, 110)
        }, 500);
     }
 }
 
-const typingInterval = setInterval(typeParagraph, 80)
+const typingInterval = setInterval(typeParagraph, 110)
 
 
 let currentListItem = null; //hold current <li> that is being typed out
@@ -55,7 +55,7 @@ function typeListItem(){
         if(listIndex < listItems.length){
 
             setTimeout(() => {
-                listTypingInterval = setInterval(typeListItem, 80)
+                listTypingInterval = setInterval(typeListItem, 100)
             }, 300);
         } 
     }
