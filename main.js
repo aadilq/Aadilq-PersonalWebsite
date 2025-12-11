@@ -102,7 +102,7 @@ function updateGreeting(){
     else if(hour >= 17 && hour < 21){
         greeting = 'Good Evening <img src="assets/day-and-night.png" alt="coffee">';
     }
-    else{
+    else if(hour >= 21 && hour < 23 || hour >= 0 && hour < 5){
         greeting = 'Good Night <img src="assets/night-mode.png" alt="coffee"> ';
     }
     document.querySelector('.greeting').innerHTML = greeting
