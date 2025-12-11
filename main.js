@@ -93,10 +93,10 @@ function updateGreeting(){
     console.log(hour)
     let greeting;
 
-    if(hour >= 5 && hour <= 12){
+    if(hour >= 5 && hour <= 11){
         greeting = 'Good Morning <img src="assets/coffee.png" alt="coffee">';
     }
-    else if(hour >= 12 && hour < 16){
+    else if(hour >= 12 && hour < 17){
         greeting = 'Good Afternoon <img src="assets/coffee.png" alt="coffee">';
     }
     else if(hour >= 17 && hour < 21){
