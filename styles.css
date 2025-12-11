@@ -1,3 +1,7 @@
+html {
+    font-size: 14px;  /* Default is 16px, try 14px or 15px */
+}
+
 body{
     background-color: #e6e6e6;
 }
