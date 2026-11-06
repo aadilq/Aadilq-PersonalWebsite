@@ -10,37 +10,48 @@
     </head>
     <body>
         <div class="movies-container">
-            <div class="movie-card">
-                <img src="assets/theodyssey.webp" alt="The Odyssey">
+            <div class="movie-card" data-trailer="f_bKjZeJBBI">
+                <img src="assets/odyssey.webp" alt="The Odyssey">
+                <button class="trailer-btn" aria-label="Play trailer">Play Trailer</button>
             </div>
-            <div class="movie-card">
-                <img src="assets/avengersdooms.webp" alt="avengersdoomsday">
+            <div class="movie-card" data-trailer="X1aFkAkFASk">
+                <img src="assets/avengersDoomsday.webp" alt="Avengers: Doomsday">
+                <button class="trailer-btn" aria-label="Play trailer">Play Trailer</button>
             </div>
-            <div class="movie-card">
-                <img src="assets/spidermanbnd.webp" alt="Fantastic Four: First Steps">
+            <div class="movie-card" data-trailer="8TZMtslA3UY">
+                <img src="assets/spidermanbnd.webp" alt="Spider Man">
+                <button class="trailer-btn" aria-label="Play trailer">Spider Man: Brand New Day</button>
             </div>
-            <div class="movie-card">
-                <img src="assets/digger.webp" alt="Fantastic Four: First Steps">
+            <div class="movie-card" data-trailer="5VYsnngkS_U">
+                <img src="assets/project_hailmary.webp" alt="Project Hail Mary">
+                <button class="trailer-btn" aria-label="Play trailer">Play Trailer</button>
             </div>
-            <div class="movie-card">
-                <img src="assets/heartofthebeast.webp" alt="Fantastic Four: First Steps">
+            <div class="movie-card" data-trailer="6zmKcUa4Xxk">
+                <img src="assets/the_drama.jpg" alt="The Drama>
+                <button class="trailer-btn" aria-label="Play trailer">Play Trailer</button>
             </div>
-            <div class="movie-card">
-                <img src="assets/toystory5.webp" alt="Fantastic Four: First Steps">
+            <div class="movie-card" data-trailer="c51ND9Hdbw0">
+                <img src="assets/toystory5.webp" alt="Toy Story 5
+">
+                <button class="trailer-btn" aria-label="Play trailer">Play Trailer</button>
             </div>
-            <div class="movie-card">
-                <img src="assets/thedrama.webp" alt="Fantastic Four: First Steps">
+            <div class="movie-card" data-trailer="LE8Ff2plgP0">
+                <img src="assets/obsession.webp" alt="Obsession">
+                <button class="trailer-btn" aria-label="Play trailer">Play Trailer</button>
             </div>
-            <div class="movie-card">
-                <img src="assets/obsession.webp" alt="Fantastic Four: First Steps">
+            <div class="movie-card" data-trailer="rz0YfD4">
+                <img src="assets/clayface.webp" alt="Clayface">
+                <button class="trailer-btn" aria-label="Play trailer">Play Trailer</button>
             </div>
-            <div class="movie-card">
-                <img src="assets/mandalorianandgrogu.webp" alt="Fantastic Four: First Steps">
+            <div class="movie-card" data-trailer="IHWlvwu8t1w">
+                <img src="assets/mandalorianandgrogu.webp" alt="Star Wars: The Mandalorian and Grogu">
+                <button class="trailer-btn" aria-label="Play trailer">Play Trailer</button>
             </div>
         </div>
-        <div>
-            <a href="index.html"><img src="assets/back.png" class="back-arrow"></a>
+        <div class="trailer-overlay" aria-hidden="true">
+            <div id="trailer-player"></div>
+            <button class="trailer-close" aria-label="Close trailer">&times;</button>
         </div>
-        <script src="" async defer></script>
+        <script src="trailers.js"></script>
     </body>
 </html>

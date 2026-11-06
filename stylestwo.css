@@ -12,6 +12,7 @@ body{
 }
 
 .movie-card{
+    position: relative;
     background-color:darkgray;
     border-radius: 10px;
     overflow: hidden;
@@ -31,16 +32,135 @@ body{
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);  
 }
 
-.back-arrow{
+movies-link{
     position: absolute;
-    width: 40px;
-    height: 40px;
+    bottom: 50px;
+    left: 50px;
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 1.6rem;
 }
 
-.back-arrow a img {
+.movies-link a{
+    color: rgb(77, 72, 72);
+    text-decoration: none;
+}
+
+.movies-link a:hover{
+    color: black;
+    transform: scale(1.2);  
+}
+
+.movies-link a::after {
+    content: ' →';
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+}
+
+.movies-link a:hover::after {
+    color: black;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+.social-links a img {
     transition: all 0.3s ease;  
 }
 
-.back-arrow:hover{
+.social-links a img:hover {
     transform: scale(1.2);  
 }
+
+.greeting img{
+    width: 20px;
+    height: 20px;
+}
+
+@view-transition {
+  navigation: auto;
+}
+
+
+
+
+
+/* ---------- Trailer button ---------- */
+.trailer-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 14px 32px;
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 1.1rem;
+    color: white;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease, background-color 0.2s ease;
+}
+
+.movie-card:hover .trailer-btn,
+.trailer-btn:focus-visible {
+    opacity: 1;
+}
+
+.trailer-btn:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* touch screens have no hover, so always show the button */
+@media (hover: none) {
+    .trailer-btn { opacity: 1; }
+}
+
+/* ---------- Hide / show posters ---------- */
+.movies-container {
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.movies-container.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* ---------- Trailer overlay ---------- */
+.trailer-overlay {
+    position: fixed;
+    inset: 0;
+    background: black;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    z-index: 100;
+}
+
+.trailer-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.trailer-overlay iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.trailer-close {
+    position: absolute;
+    top: 20px;
+    right: 28px;
+    font-size: 2.5rem;
+    line-height: 1;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.trailer-close:hover { opacity: 1; }
