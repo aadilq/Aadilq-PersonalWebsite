@@ -1,10 +1,5 @@
-const paragraphText = "It's nice to meet you! My name is Aadil and I am a <br> CS student at Florida International University. <br>Apart from building projects, my hobbies include:"
+const paragraphText = "Hi, my name is Aadil Qureshi and I am a senior studying Computer Science at <br> Florida International University currently on track to graduate Fall 2027. <br><br> For the past four months, I’ve been working as a Fullstack Engineer <br> at FIU’s Digital Communications department. In this role, I work with <br>Cascade’s content management system to maintain and work on new <br> features for FIU’s internal websites."
 
-const listItems = [
-    "Watching new movies in the theaters",
-    "Playing Pickleball", 
-    "Watching & playing Basketball"
-]
 
 const aboutParagraph = document.getElementById('about-text');
 const aboutList = document.getElementById('about-list');

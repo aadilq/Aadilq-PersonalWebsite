@@ -81,6 +81,7 @@ main{
     color: black;
     opacity: 1;
     transform: translateX(0);
+    
 }
 
 
@@ -97,8 +98,87 @@ main{
     height: 20px;
 }
 
+@view-transition {
+  navigation: auto;
+}
 
 
+/* ---------- Lofi music player ---------- */
+.music-player {
+    position: fixed;
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px 10px 10px;
+    font-family: 'Inria Sans', sans-serif;
+    color: rgb(77, 72, 72);
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 999px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    z-index: 50;
+}
 
+.music-player button {
+    display: grid;
+    place-items: center;
+    padding: 0;
+    color: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
 
+.music-player button:hover { color: black; transform: scale(1.1); }
 
+.mp-toggle {
+    width: 36px;
+    height: 36px;
+    color: white !important;
+    background: rgb(77, 72, 72) !important;
+    border-radius: 50%;
+}
+
+.mp-toggle:hover { background: black !important; }
+
+.mp-toggle .icon-pause { display: none; }
+.music-player.playing .icon-play { display: none; }
+.music-player.playing .icon-pause { display: block; }
+
+.mp-info {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    min-width: 90px;
+    max-width: 160px;
+}
+
+.mp-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.6;
+}
+
+.mp-title {
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mp-volume {
+    width: 80px;
+    accent-color: rgb(77, 72, 72);
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .music-player { bottom: 100px; }
+    .mp-volume { width: 60px; }
+}
